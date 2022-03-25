@@ -1,0 +1,55 @@
+{
+  "trueandfalse": {
+    "name": "true & false ?",
+    "item": {
+      "answer-0": "True",
+      "answer-1": "False"
+    }
+  },
+  "agree": {
+    "name": "Agree ?",
+    "item": {
+      "answer-0": "Strongly agree",
+      "answer-1": "Somewhat agree",
+      "answer-2": "Somewhat disagree",
+      "answer-3": "Strongly disagree"
+    }
+  },
+  "enough": {
+    "name": "Enough ?",
+    "item": {
+      "answer-0": "Much too little",
+      "answer-1": "The right amount",
+      "answer-2": "Much too much"
+    }
+  },
+  "satisfied": {
+    "name": "Satisfied ?",
+    "item": {
+      "answer-0": "Very Satisfied",
+      "answer-1": "Somewhat satisfied",
+      "answer-2": "Neither Satisfied nor dissatisfied",
+      "answer-3": "Somewhat dissatisfied",
+      "answer-4": "Very dissatisfied"
+    }
+  },
+  "scott": {
+    "name": "Scott ?",
+    "item": {
+      "answer-0": "Very scott",
+      "answer-1": "Somewhat scott",
+      "answer-2": "Neither scott nor dissatisfied",
+      "answer-3": "Somewhat not scott",
+      "answer-4": "Very not scott"
+    }
+  },
+  "mobile": {
+    "name": "Mobile ?",
+    "item": {
+      "answer-0": "Nokia",
+      "answer-1": "Iphone",
+      "answer-2": "vivo",
+      "answer-3": "1plus"
+    }
+  }
+}
