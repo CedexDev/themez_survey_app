@@ -1,0 +1,66 @@
+.x-campaign {
+    position: relative;
+    width: 100%;
+    height: 640px;
+  }
+  .x-campaign > iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .x-campaign > a {
+    display: none;
+  }
+  @media only screen and (max-width: 600px) {
+    .x-campaign {
+      position: relative;
+      height: 100vw;
+    }
+    .x-campaign > a {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999px;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+
+  .fs-box {
+    background: #010911;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    visibility: hidden;
+  }
+  .fs-box .bck {
+    background: #010911;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .fs-box .bck svg {
+    margin: 0 auto;
+    color: #fff;
+    opacity: 0.5;
+    position: relative;
+    left: -1px;
+  }
+  .fs-box iframe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }

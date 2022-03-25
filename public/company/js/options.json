@@ -1,0 +1,27 @@
+var options = {
+    "options": {
+        "True or false?": {
+            "answer-1": "True",
+            "answer-2": "Fale"
+        },
+        "Agree?": {
+            "answer-1": "Strongly agree",
+            "answer-2" : "Somewhat agree",
+            "answer-3" : "Somewhat disagree",
+            "answer-4": "Strongly disagee"
+        },
+        "Enough?": {
+            "answer-1": "Much too little",
+            "answer-2": "The right amount",
+            "answer-3": "Much too much"
+        },
+        "Satisfied?": {
+            "answer-1": "Very satisfied",
+            "answer-2" : "Somewhat satisfied",
+            "answer-3" : "Neither satisfied nor dissatisfied",
+            "answer-4": "Somewhat dissatisfied",
+            "answer-5": "Very dissatisfied"
+        },
+        // and many more
+    }
+};

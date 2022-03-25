@@ -1,0 +1,468 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@media (max-width: 767.98px){
+body .display-4 {
+        font-size: 1.6rem;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+@keyframes max {
+    from {
+        max-height: 56px;
+    }
+
+    to {
+        max-height: 500px;
+    }
+}
+
+@keyframes splash {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    /* 50% {
+        opacity: 1;
+        transform: scale(1.2);
+    } */
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* .multiple-choice .responses_container>div:first-child{
+    margin-top: auto;
+}
+.multiple-choice .responses_container>div:last-child{
+    margin-bottom: auto;
+} */
+/* snap /////////////////////////////////
+//////////////////////////////////////////////// */
+
+.loaded .snap-container {
+    opacity: 1;
+}
+/* body {
+    scroll-behavior: smooth;
+} */
+.snap-container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.snap-container>* {
+    min-height: 100%;
+    padding: 50px 0;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    scroll-snap-stop: always;
+    overflow-y: scroll;
+}
+.welcome-snap .question-fade, .thank-you-snap .question-fade {
+    padding: 0;
+}
+
+
+.snap .back-img {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+    transition: 0.5s opacity ease-in-out;
+}
+
+.snap video {
+    opacity: 0;
+    position: fixed;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 0.5s opacity ease-in-out;
+}
+
+.snap.inview .back-img,
+.snap.inview video {
+    opacity: 0.35;
+}
+.snap.inview ~ .snap.inview .back-img,
+.snap.inview ~ .snap.inview video {
+    opacity: 0!important;
+}
+@media (min-width: 768px) {
+.q-content {
+    /* position: sticky; */
+    z-index: 3;
+    padding: 0 30px;
+    /* top: 56px; */
+}
+}
+.snap .question-fade {
+    opacity: 0;
+    transition:0.75s all ease-in-out;
+}
+.snap.inview .question-fade {
+    opacity: 1;
+}
+
+/* forms /////////////////////////////////
+//////////////////////////////////////////////// */
+
+.timeline-buttons .select-1 .custom-control label {
+    cursor: pointer;
+    padding-left: 40px;
+    /* border: solid 1px; */
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    height: 56px;
+    text-align: left;
+    position: relative;
+}
+@media (min-width: 768px) {
+    /* .timeline-buttons .select-1 .custom-control label,
+    body .multiple-choice .responses_container>div {
+        margin: 10px 0;
+    }
+    .question-heading {
+        margin-top: 14px;
+    } */
+}
+.timeline-buttons .select-1 .custom-control label {
+    width: auto;
+    float: left;
+}
+.timeline-buttons .select-1,
+.timeline-buttons .response_item,
+.timeline-buttons .response_item > div > div {
+    display: flex;
+    align-items: center;
+}
+.timeline-buttons .response_item {
+    height: 100%;
+    min-height: 56px;
+    margin: 2px 0;
+    position: relative;
+    animation: max ease 2s forwards;
+}
+
+.timeline-buttons .response_item:after,
+.timeline-buttons .select-1 .custom-control label:after {
+    height: calc(100% - 55px);
+    margin: 2px 0;
+    border-left: 3px solid #fff;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 27px;
+}
+.timeline-buttons .select-1 .custom-control label span {
+    transition: all 0.2s ease-in-out;
+}
+.timeline-buttons .custom-control,
+.timeline-buttons .response_item > div {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.response_item .ans {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-left: 40px;
+}
+@media (max-width: 767px) {
+    .response_item .ans, .timeline-buttons .select-1 .custom-control label {
+        padding-left: 13px;
+        font-size: 16px;
+    }
+}
+
+.multiple-choice {
+    display: flex;
+    /* height: 100vh; */
+    align-items: center;
+    width: 100%;
+}
+
+.multiple-choice>.select-group,
+.multiple-choice .responses_container {
+    /* height: calc(100vh - 200px); */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.multiple-choice>.previous_responses {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.multiple-choice>.select-group>div,
+.multiple-choice .responses_container>div {
+    /* margin: auto 0; */
+    width: 100%;
+}
+
+
+
+/* .timeline-buttons .response_item>div>div {
+    border: solid 1px transparent;
+} */
+
+input.form-control.form-control-underline {
+    border-bottom: 1px solid;
+}
+
+input.form-control.form-control-underline:focus {
+    border-bottom: 1px solid;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .question-fade {
+        padding: 0 40px;
+    }
+    .multiple-choice>.select-group {
+        /* height: 45vh; */
+        width: 100%;
+    }
+    body .multiple-choice .responses_container {
+        display: flex;
+        /* height: 45vh; */
+        align-items: center;
+    }
+    .multiple-choice {
+        display: flex;
+        /* height: 45vh; */
+        align-items: center;
+    }
+    .timeline-buttons .custom-control, .timeline-buttons .response_item > div {
+        /* height: calc(100% - 20px); */
+    }
+
+}
+
+body .response_item span.percent {
+    position: absolute;
+    left: -50px;
+    top: calc(50% - 7px);
+    font-size: 12px;
+    width: 40px;
+    text-align: right;
+}
+/* form validation /////////////////////////////////
+//////////////////////////////////////////////// */
+
+.valid,
+.invalid,
+.spin {
+    display: none;
+}
+
+body .question-fade input[type="email"]:valid:not(:focus):not(:placeholder-shown)+.valid,
+body .question-fade input[type="text"]:valid:not(:focus):not(:placeholder-shown)+.valid,
+body .question-fade input[type="number"]:valid:not(:focus):not(:placeholder-shown)+.valid,
+body .question-fade textarea:valid:not(:focus):not(:placeholder-shown)+.valid {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: -57px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(0deg) scale(0);
+    animation: success ease-in 0.15s forwards;
+    animation-delay: 1s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding: 3px;
+}
+
+body .question-fade input[type="email"]:not(:focus):not(:placeholder-shown)~.spin,
+body .question-fade input[type="text"]:not(:focus):not(:placeholder-shown)~.spin,
+body .question-fade input[type="number"]:not(:focus):not(:placeholder-shown)~.spin,
+body .question-fade textarea:not(:focus):not(:placeholder-shown)~.spin {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: -57px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear forwards;
+    animation-name: spin;
+    -webkit-animation-name: spin;
+}
+
+body .question-fade input[type="email"]:invalid:not(:focus):not(:placeholder-shown)~.invalid,
+body .question-fade input[type="text"]:invalid:not(:focus):not(:placeholder-shown)~.invalid,
+body .question-fade input[type="number"]:invalid:not(:focus):not(:placeholder-shown)~.invalid,
+body .question-fade textarea:invalid:not(:focus):not(:placeholder-shown)~.invalid {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: -57px;
+    transform: rotate(0deg) scale(0);
+    animation: failure ease-in 0.15s forwards;
+    animation-delay: 1s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+
+    90% {
+        transform: translate(-50%, -50%) rotate(540deg) scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes success {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes failure {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+/* progress /////////////////////////////////
+//////////////////////////////////////////////// */
+
+
+.snap-progress {
+    height: 7px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: none;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.snap-progress span {
+    width: 100%;
+    display: block;
+    height: 7px;
+}
+
+.inview .snap-progress {
+    /* display: block; */
+}
+
+/* scroll /////////////////////////////////
+//////////////////////////////////////////////// */
+
+
+
+
+
+
+
+/* #progress{
+    width: 0%;
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  } */
+
+  /*hide the default side scrollbar*/
+  /* html::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } */
